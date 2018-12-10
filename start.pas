@@ -1,6 +1,6 @@
 program madStrap;
 { $librarypath '../blibs/'}
-uses atari, crt; // b_utils;
+uses atari, crt, rmt; // b_utils;
 
 const
 {$i const.inc}
@@ -12,12 +12,19 @@ var
     b: byte = NONE;
     w: word;
     s: TString;
+
+    //msx: TRMT;
     //oldvbl,oldsdli:pointer;
     //strings:array [0..0] of word absolute STRINGS_ADDRESS;
 
 begin
     //chbas := Hi(CHARSET_ADDRESS); // set custom charset
     //savmsc := VIDEO_RAM_ADDRESS;  // set custom video address
+
+(*  initialize RMT player  *)
+    //msx.player := pointer(RMT_PLAYER_ADDRESS);
+    //msx.modul := pointer(RMT_MODULE_ADDRESS);
+    //msx.Init(0);
 
 (*  set custom display list  *)
     //Pause;
