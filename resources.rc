@@ -29,7 +29,7 @@
  
 #DISPLAY_LIST_ADDRESS rcasm 'dlist.asm'
 
-#STRINGS_ADDRESS rcasm 'strings.asm'
+#, STRINGS_ADDRESS rcasm 'strings.asm'
 
 ; rmt module
 
