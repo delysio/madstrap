@@ -13,4 +13,4 @@ Designed to speed up project development startup, providing set useful optional 
 - custom vertical blank interrupt
 - custom display list interrupt
 
-You just download, and uncomment all features you might need in your project.
+You just download, rename, and uncomment all features you might need in your project.
