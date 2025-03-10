@@ -23,5 +23,6 @@ Designed to speed up project development startup, providing starting set of usef
 - example bash scripts for image conversions and APL/ZX compression (assetes/rebuild.sh)
 - example batch file for executable building (build.bat)
 - example intro.pas merged as INIT block (set ADDINTRO=0 in *build.bat* to disable)
+- .vscode example settings
 
 You just download, rename, and comment/uncomment/remove all features useful in your project.
