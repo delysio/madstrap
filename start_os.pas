@@ -1,4 +1,5 @@
 program madStrap_os;
+{$ librarypath '../blibs/'}
 uses atari, crt, aplib, rmt; 
 
 const
