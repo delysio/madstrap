@@ -24,4 +24,4 @@ Designed to speed up project development startup, providing starting set of usef
 - example batch file for executable building (build.bat)
 - example intro.pas merged as INIT block (set ADDINTRO=0 in *build.bat* to disable)
 
-You just download, rename, and uncomment/uncomment/remove all features useful in your project.
+You just download, rename, and comment/uncomment/remove all features useful in your project.
