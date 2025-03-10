@@ -1,4 +1,4 @@
-program madStrap_no_os;
+program madStrap;
 {$librarypath '../blibs/'}
 uses atari, crt, rmt, aplib, b_system, b_utils;
 
