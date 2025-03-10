@@ -4,15 +4,21 @@
 strings_list
     dta a(txt_0)
     dta a(txt_1)
+    dta a(txt_2)
+    dta a(txt_3)
     ;dta a(txt_2)
 
 strings
 
 txt_0         
-    dta c'Hello MadStrap!',0
+    dta 15,c'Hello MadStrap!'
 txt_1
-    dta c'Press any key to exit...',0
-;txt_2         
+    dta 24,c'Press any key to exit...'
+txt_2         
+    dta 15,d'Hello MadStrap!'
+txt_3
+    dta 24,d'Press any key to exit...'
+;txt_4         
 
 
  .print "STRINGS SIZE: ", *-strings_list

@@ -25,13 +25,5 @@
 ; 
 ; remove # to uncomment and use examples below:
 
-#CHARSET_ADDRESS rcdata 'font.fnt'
+LOGO rcdata 'assets/mplogo.pak'
  
-#DISPLAY_LIST_ADDRESS rcasm 'dlist.asm'
-
-#STRINGS_ADDRESS rcasm 'strings.asm'
-
-; rmt module
-
-#RMT_PLAYER_ADDRESS RMTPLAY 'rmt_feat.asm' 0
-#RMT_MODULE_ADDRESS RMT 'song.rmt'

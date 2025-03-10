@@ -32,8 +32,8 @@ DL_MODE_320x192G2 = $F;
 DL_JMP = %00000001; // Order to jump
 DL_JVB = %01000001; // Jump to begining
     
-; It's always useful to include you program global constants here
-    icl 'const.inc'
+; It's always useful to include you program memory layout here
+    icl 'memory.inc'
 
 ; and declare display list itself
 
@@ -42,8 +42,9 @@ dl_start
     dta DL_BLANK8 + DL_DLI  ; 8 blank lines and display list interrupt call
     :2 dta DL_BLANK8        ; 16 blank lines
     dta DL_MODE_40x24T2 + DL_LMS, a(VIDEO_RAM_ADDRESS) ; first text line
-    :23 dta DL_MODE_40x24T2 ; remaining 23 lines
-    :2 dta DL_BLANK8        ; 16 blanks
+    :7 dta DL_MODE_40x24T2 ; remaining 7 lines
+    :32 dta DL_MODE_160x96G2 ; 32 lines of graphics
+    :8 dta DL_MODE_40x24T2 ; remaining 8 lines
     dta DL_JVB, a(dl_start) ; jump to start
 
 
