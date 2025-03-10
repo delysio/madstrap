@@ -19,6 +19,8 @@ git clone https://gitlab.com/bocianu/madstrap $PROJECT_NAME
 cd $PROJECT_NAME
 rm -rf .git
 cp $INFILE ${PROJECT_NAME}.pas
-sed -i -e 's/program madStrap;/program ${PROJECT_NAME};/g' ${PROJECT_NAME}.pas
+sed -i -e 's/program madStrap;/program '${PROJECT_NAME}';/g' ${PROJECT_NAME}.pas
+sed -i -e 's/NAME=start_nos/NAME='${PROJECT_NAME}'/g' -e 's/ADDINTRO=1/ADDINTRO=0/g' build.bat
+
 rm start_*.pas
 
