@@ -1,6 +1,6 @@
 @setlocal
 @SET PATH=%PATH%;D:\atari\MadPascal;D:\atari\mads
-@SET NAME=start_nos
+@SET NAME=start_os
 @SET ADDINTRO=1
 @SET INTRONAME=intro
 @SET NAMEOUT=%NAME%_full

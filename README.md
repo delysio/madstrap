@@ -29,7 +29,7 @@ MadStrap is designed to accelerate project setup by providing a starting set of 
 
 You can simply download or clone the repository, rename `start*.pas` manually, and then enable, disable, or remove the features as needed for your project.
 
-Alternatively, you can use an automated approach by fetching the Bash script [mpinit.sh](https://gitlab.com/bocianu/madstrap/-/raw/master/utils/mpinit.sh?inline=false) and executing it.
+Alternatively, you can use an automated approach by fetching the Bash script [utils/mpinit.sh](https://gitlab.com/bocianu/madstrap/-/raw/master/utils/mpinit.sh?inline=false) and executing it.
 
 ```
 Usage: ./mpinit.sh project_name [os]
@@ -37,9 +37,9 @@ Usage: ./mpinit.sh project_name [os]
 
 This will:
 - Clone MadStrap into a folder named `project_name`.
-- Rename `start.pas` to `project_name.pas`.
+- Rename `start*.pas` to `project_name.pas`.
 - Update the build file accordingly.
 
 ### Optional Parameter
-The optional `os` parameter selects the appropriate OS-compliant template. If omitted, the default template is used (non-OS mode with full RAM access).
+The optional `nos` parameter selects the `non-OS` mode with full RAM access. If omitted, the default `OS enabled` template is used.
 
