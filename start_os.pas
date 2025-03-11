@@ -14,7 +14,7 @@ const
 
 var
     msx: TRMT;
-    strings:array [0..0] of ^string absolute STRINGS_ADDRESS;
+    strings:array [0..0] of ^Tstring absolute STRINGS_ADDRESS;
     //mul_40: array of word = [ {$EVAL 110,":1*40"} ];
 
 {$i interrupts.inc}
@@ -25,9 +25,9 @@ var
     oldvbl,olddli:pointer;
 
 begin
+    TextMode(0);
     chbas := Hi(CHARSET_ADDRESS); // set custom charset
     savmsc := VIDEO_RAM_ADDRESS;  // set custom video address
-
 
 (*  initialize RMT player  *)
     msx.player := pointer(RMT_PLAYER_ADDRESS);
@@ -46,13 +46,12 @@ begin
     GetIntVec(iDLI, olddli);
     SetIntVec(iDLI, @dli);
     nmien := $c0; // set $80 for dli only (without vbl)
-    
+
 (*  your code goes here *)
     _ClearScreen;
     Writeln(strings[0]);
     Writeln;
     Writeln(strings[1]);
-
     InitCreatures;
     PMGInit;
 
@@ -67,5 +66,6 @@ begin
     SetIntVec(iVBL, oldvbl);
     SetIntVec(iDLI, olddli);
     nmien := $40; // turn off dli
-
+    sdmctl := %00000010;  
+    gractl := %00000000;  
 end.

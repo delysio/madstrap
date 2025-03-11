@@ -23,10 +23,8 @@ var
 {$define _ReadKey := kbcode }
 {$define _ClearScreen := FillByte(pointer(VIDEO_RAM_ADDRESS),40*32,0) }
 
-
 begin
     //Move(pointer($e000),CHARSET_ADDRESS ,1024); // optional: backup system charset to custom charset
-    
     SystemOff;
     SetCharset(Hi(CHARSET_ADDRESS)); // set custom charset
 

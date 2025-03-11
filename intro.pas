@@ -1,7 +1,7 @@
 program intro;
 uses atari, graph, crt, aplib;
 const   
-    LOGO = $4000;
+    LOGO = $3000;
 {$r assets/intro.rc}
 var
     i:byte;
@@ -30,10 +30,12 @@ begin
     PlayChord(135,108);
     PlayChord(121,96);
 
+    i:=0;
     repeat 
         Pause; 
         Inc(i); 
     until keypressed or (i=150);
 
     for color1:=15 downto 1 do Pause;
+    if keypressed then readkey;
 end.

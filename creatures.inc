@@ -29,6 +29,5 @@ end;
 
 procedure InitCreatures;
 begin
-    fillbyte(pointer(VIDEO_RAM_ADDRESS+(8*40)),20*32,0);
     color2:=0;
 end;
