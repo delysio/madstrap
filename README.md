@@ -48,8 +48,8 @@ The optional `nos` parameter specifies whether the project should use the OS-dep
 ### Example of Use  
 
 ```
-wget https://gitlab.com/bocianu/madstrap/-/raw/master/utils/mpinit.sh?inline=false
-chmod +x ./mpinit.sh
+curl https://gitlab.com/bocianu/madstrap/-/raw/master/utils/mpinit.sh?inline=false > mpinit.sh
+chmod +x mpinit.sh
 ./mpinit.sh supergame nos
 ```  
 
